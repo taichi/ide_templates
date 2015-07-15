@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template autoinsert="true" context="java-members" deleted="false" description="slf4j logger" enabled="true" name="logger">static final ${l:newType(org.slf4j.Logger)} LOG = ${f:newType(org.slf4j.LoggerFactory)}.getLogger(${enclosing_type}.class);${cursor}</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log debug message" enabled="true" name="debug">${log:field(org.slf4j.Logger)}.debug("${msg}");</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log debug message with template" enabled="true" name="dt">${log:field(org.slf4j.Logger)}.debug("${msg} {}", ${var});</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log info message" enabled="true" name="info">${log:field(org.slf4j.Logger)}.debug("${msg}");</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log info message with template" enabled="true" name="it">${log:field(org.slf4j.Logger)}.debug("${msg} {}", ${var});</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log warn message and throwable" enabled="true" name="warn">${log:field(org.slf4j.Logger)}.warn(${t:localVar(java.lang.Throwable)}.getMessage(), ${t});</template>
+	<template autoinsert="true" context="java-statements" deleted="false" description="log error message and throwable" enabled="true" name="error">${log:field(org.slf4j.Logger)}.error(${t:localVar(java.lang.Throwable)}.getMessage(), ${t});</template>
+</templates>

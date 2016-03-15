@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <templates>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="assertEquals - JUnit 4" enabled="true" name="ase">${:importStatic(org.junit.Assert.assertEquals)}assertEquals(${expected:var(java.lang.Object)},
+		description="JUnit 4 - assertEquals" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.ase" name="ase">${:importStatic(org.junit.Assert.assertEquals)}assertEquals(${expected:var(java.lang.Object)},
 		${actual:var(java.lang.Object)});${cursor}</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="assertTrue - JUnit 4" enabled="true" name="astrue">${:importStatic(org.junit.Assert.assertTrue)}assertTrue(${actual:var(boolean)});${cursor}
+		description="JUnit 4 - assertTrue" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.astrue" name="astrue">${:importStatic(org.junit.Assert.assertTrue)}assertTrue(${actual:var(boolean)});${cursor}
 	</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="assertFalse - JUnit 4" enabled="true" name="asfalse">${:importStatic(org.junit.Assert.assertFalse)}assertFalse(${expected:var(boolean)});${cursor}
+		description="JUnit 4 - assertFalse" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.asfalse" name="asfalse">${:importStatic(org.junit.Assert.assertFalse)}assertFalse(${expected:var(boolean)});${cursor}
 	</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="assertNotNull - JUnit 4" enabled="true" name="asnonull">${:importStatic(org.junit.Assert.assertNotNull)}assertNotNull(${actual:var(java.lang.Object)});${cursor}
+		description="JUnit 4 - assertNotNull" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.asnonnull" name="asnonull">${:importStatic(org.junit.Assert.assertNotNull)}assertNotNull(${actual:var(java.lang.Object)});${cursor}
 	</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="assertNull - JUnit 4" enabled="true" name="asnull">${:importStatic(org.junit.Assert.assertNull)}assertNull(${actual:var(java.lang.Object)});${cursor}
+		description="JUnit 4 - assertNull" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.asnull" name="asnull">${:importStatic(org.junit.Assert.assertNull)}assertNull(${actual:var(java.lang.Object)});${cursor}
 	</template>
 	<template autoinsert="true" context="java-members" deleted="false"
-		description="Setup - JUnit4" enabled="true" name="setup">${:import(org.junit.Before)}@Before&#13;
+		description="JUnit 4 - Setup" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.setup" name="setup">${:import(org.junit.Before)}@Before&#13;
 		public void setUp(){&#13;
 		${cursor}&#13;
 		}</template>
 	<template autoinsert="true" context="java-members" deleted="false"
-		description="Teardown - JUnit 4" enabled="true" name="teardown">${:import(org.junit.After)}@After&#13;
+		description="JUnit 4 - Teardown" enabled="true" 
+		id="org.eclipse.jdt.ui.templates.junit4.teardown" name="teardown">${:import(org.junit.After)}@After&#13;
 		public void tearDown(){&#13;
 		${cursor}&#13;
 		}</template>
 	<template autoinsert="false" context="java-members" deleted="false"
-		description="test method - JUnit 4" enabled="true"
-		id="org.eclipse.jdt.ui.templates.test_junit4" name="test">${:import(org.junit.Test)}@Test
+		description="JUnit 4 - test method" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.test" name="test">${:import(org.junit.Test)}@Test
 		public void ${testName}() throws Exception {
 		${cursor}
 		}</template>
+	<template autoinsert="false" context="java-members" deleted="false"
+		description="JUnit 4 - fail" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.fail" name="fail">${:importStatic(org.junit.Assert.fail)}fail();</template>
 </templates>

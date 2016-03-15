@@ -20,6 +20,9 @@
 		description="JUnit 4 - assertNull" enabled="true"
 		id="org.eclipse.jdt.ui.templates.junit4.asnull" name="asnull">${:importStatic(org.junit.Assert.assertNull)}assertNull(${actual:var(java.lang.Object)});${cursor}
 	</template>
+	<template autoinsert="true" context="java-statements" deleted="false"
+		description="JUnit 4 - fail" enabled="true"
+		id="org.eclipse.jdt.ui.templates.junit4.fail" name="fail">${:importStatic(org.junit.Assert.fail)}fail();</template>
 	<template autoinsert="true" context="java-members" deleted="false"
 		description="JUnit 4 - Setup" enabled="true"
 		id="org.eclipse.jdt.ui.templates.junit4.setup" name="setup">${:import(org.junit.Before)}@Before&#13;
@@ -38,7 +41,4 @@
 		public void ${testName}() throws Exception {
 		${cursor}
 		}</template>
-	<template autoinsert="false" context="java-members" deleted="false"
-		description="JUnit 4 - fail" enabled="true"
-		id="org.eclipse.jdt.ui.templates.junit4.fail" name="fail">${:importStatic(org.junit.Assert.fail)}fail();</template>
 </templates>

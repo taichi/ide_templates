@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <templates>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="capture argument values - Mockito" enabled="true" name="capture">${:import(org.mockito.ArgumentCaptor)}ArgumentCaptor&lt;${Type}&gt;
+		description="Mockito - capture argument values" enabled="true" name="capture">${:import(org.mockito.ArgumentCaptor)}ArgumentCaptor&lt;${Type}&gt;
 		${ac} = ArgumentCaptor.forClass(${Type}.class);&#13;
 		verify(${mock}).${mockMethod}(${ac}.capture());&#13;
 		${Type} ${value} = ${ac}.getValue();${cursor}</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="create a mock with mockito - Mockito" enabled="true"
+		description="Mockito - create a mock with mockito" enabled="true"
 		name="mock">${:importStatic('org.mockito.Mockito.*')}${Type} ${mockName} =
 		mock(${Type}.class);${cursor}</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="verify mocked method called exactly once - Mockito"
+		description="Mockito - verify mocked method called exactly once"
 		enabled="true" name="verify">${:importStatic('org.mockito.Mockito.*')}verify(${mock},
 		times(1)).${mockMethod}(${args});${cursor}</template>
 	<template autoinsert="true" context="java-statements" deleted="false"
-		description="mock a return value - Mockito" enabled="true" name="when">${:importStatic('org.mockito.Mockito.*')}when(${mock}).then${Return}(${values});${cursor}</template>
+		description="Mockito - mock a return value" enabled="true" name="when">${:importStatic('org.mockito.Mockito.*')}when(${mock}).then${Return}(${values});${cursor}</template>
 </templates>
